@@ -10,7 +10,10 @@
 <button type="button" name="button">5</button>
 <br><br>
 <%= link_to "Edit", edit_work_path %>
-
+<br>
+<%= link_to "Delete", work_path(@work),
+                         :data => {:confirm => "Delete this post?",
+                                   :method => "delete"} %>
 
 <hr>
 <p><%= link_to "all artists", works_path %></p>
