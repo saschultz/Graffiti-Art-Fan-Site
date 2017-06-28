@@ -13,7 +13,7 @@ class WorksController < ApplicationController
 
   def create
     @work = Work.new(work_params)
-    # @work.score = 0
+    @work.rating = 0
      if @work.save
        redirect_to works_path
      else
@@ -41,10 +41,31 @@ class WorksController < ApplicationController
   end
 
   def rate
-    @work = Work.find(params[:id])
-    # current_rating = @work.rate_post
-    # @work.update(rating: current_rating)
-    redirect_to works_path
+    @work = Work.find(params[:work_id])
+
+    if params[:class] = '1'
+      current_rating = @work.rate_post('1')
+      @work.update(rating: current_rating)
+      redirect_to works_path
+    elsif params[:class] = '2'
+      current_rating = @work.rate_post('2')
+      @work.update(rating: current_rating)
+      redirect_to works_path
+    elsif params[:class] = '3'
+      current_rating = @work.rate_post('3')
+      @work.update(rating: current_rating)
+      redirect_to works_path
+    elsif params[:class] = '4'
+      current_rating = @work.rate_post('4')
+      @work.update(rating: current_rating)
+      redirect_to works_path
+    elsif params[:class] = '5'
+      current_rating = @work.rate_post('5')
+      @work.update(rating: current_rating)
+      redirect_to works_path
+    end
+
+    # redirect_to works_path
   end
 
 private
