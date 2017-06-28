@@ -1,0 +1,7 @@
+<h1>Graffiti Art</h1>
+
+<ul>
+  <% @works.each do |work| %>
+    <li><%= work.artist %> - <%= work.location %></li>
+  <% end %>
+</ul>
