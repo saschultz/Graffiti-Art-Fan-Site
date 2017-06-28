@@ -2,6 +2,6 @@
 
 <ul>
   <% @works.each do |work| %>
-    <li><%= work.artist %> - <%= work.location %></li>
+    <li><%= link_to work.artist, work_path(work) %> - <%= work.location %></li>
   <% end %>
 </ul>
