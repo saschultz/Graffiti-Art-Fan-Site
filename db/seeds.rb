@@ -8,5 +8,3 @@ Work.destroy_all
 end
 
 p "#{Work.count} characters"
-# p "#{Company.count} company"
-# p "#{Time.count} time"
