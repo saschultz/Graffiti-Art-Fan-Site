@@ -2,12 +2,26 @@
 <h4>in <%= @work.location %></h4>
 
 <h5><a href="<%= @work.link %>" target="_blank">image</a></h5>
+<br>
 <p>rate this work</p>
-<button type="button" name="button">1</button>
-<button type="button" name="button">2</button>
-<button type="button" name="button">3</button>
-<button type="button" name="button">4</button>
-<button type="button" name="button">5</button>
+<div class="row">
+  <div class="col-sm-1">
+    <%= button_to '1', work_rate_path(@work) %>
+  </div>
+  <div class="col-sm-1">
+    <%= button_to '2', work_rate_path(@work) %>
+  </div>
+  <div class="col-sm-1">
+    <%= button_to '3', work_rate_path(@work) %>
+  </div>
+  <div class="col-sm-1">
+    <%= button_to '4', work_rate_path(@work) %>
+  </div>
+  <div class="col-sm-1">
+    <%= button_to '5', work_rate_path(@work) %>
+  </div>
+</div>
+
 <br><br>
 <%= link_to "Edit", edit_work_path %>
 <br>
